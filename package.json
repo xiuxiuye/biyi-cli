@@ -1,0 +1,27 @@
+{
+  "name": "ypf-cli2020",
+  "version": "1.0.10",
+  "description": "A simple CLI for biyi-web.",
+  "preferGlobal": true,
+  "bin": {
+    "biyi": "bin/main.js"
+  },
+  "keywords": [
+    "biyi",
+    "node",
+    "vue",
+    "cli"
+  ],
+  "author": "ypf",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "commander": "^4.1.0",
+    "download-git-repo": "^3.0.2",
+    "github-download": "^0.5.0",
+    "inquirer": "^7.0.4",
+    "ora": "^4.0.3",
+    "validate-npm-package-name": "^3.0.0",
+    "execa": "^4.0.0"
+  }
+}
