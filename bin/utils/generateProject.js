@@ -4,12 +4,13 @@ const installDeps = require('./installDeps')
 const createInquirer = require('./createInquirer')
 const fs = require('fs')
 const path = require('path')
+const config = require('../config/config')
 
 const options = [
     {
         type: 'confirm',
         name: 'autoInstall',
-        message: '是否立即安装相关依赖包？',
+        message: '项目创建成功，是否立即安装相关依赖包？',
         default: 'false'
     }
 ]
@@ -17,7 +18,7 @@ const options = [
 function generateProject(targetPath, version) {
     const spinner = ora('正在创建项目...')
     spinner.start()
-    download(`yexiaofan/ant-admin`, targetPath, { clone: false }, err => {
+    download(`${config.repository}#${version}`, targetPath, { clone: false }, err => {
         spinner.stop()
         if (err) {
             console.log(err)

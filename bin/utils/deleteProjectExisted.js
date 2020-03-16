@@ -17,3 +17,4 @@ function deleteProjectExisted(path) {
 }
 
 deleteProjectExisted(projectPath)
+deleteProjectExisted()
