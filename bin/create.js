@@ -2,6 +2,7 @@ const getTargetPath = require('./utils/getTargetPath')
 const isFileExist = require('./utils/isFileExist')
 const handleFileExisted = require('./utils/handleFileExisted')
 const generateProject = require('./utils/generateProject')
+const saveProjectName = require('./utils/saveProjectPath')
 const ora = require('ora')
 const execa = require('execa')
 const path = require('path')
@@ -11,6 +12,7 @@ function create(projectName, version) {
     const targetPath = getTargetPath(projectName)
     // 检查新建目录是否已存在
     if (isFileExist(targetPath)) {
+        saveProjectName(targetPath)
         handleFileExisted().then(async () => {
             const spinner = ora('正在删除原项目...')
             spinner.start()

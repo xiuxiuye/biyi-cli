@@ -1,1 +1,0 @@
-module.exports = 'E:\\Git\\biyi-cli\\biyi-test1'

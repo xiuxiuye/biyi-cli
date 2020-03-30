@@ -2,8 +2,7 @@ const download = require('download-git-repo')
 const ora = require('ora')
 const installDeps = require('./installDeps')
 const createInquirer = require('./createInquirer')
-const fs = require('fs')
-const path = require('path')
+const saveProjectName = require('./saveProjectPath')
 const config = require('../config/config')
 
 const options = [
@@ -30,16 +29,6 @@ function generateProject(targetPath, version) {
                     installDeps(targetPath)
                 }
             })
-        }
-    })
-}
-
-// 保存项目路径
-function saveProjectName(targetPath) {
-    targetPath = targetPath.split('\\').join('\\\\')
-    fs.writeFile(path.resolve(__dirname, '../config/projectPath.js'), `module.exports = '${targetPath}'`, function (err) {
-        if (err) {
-            console.log(chalk.red(`error: ${err}`))
         }
     })
 }
