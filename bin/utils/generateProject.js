@@ -17,7 +17,7 @@ const options = [
 function generateProject(targetPath, version) {
     const spinner = ora('正在创建项目...')
     spinner.start()
-    download(`${config.repository}#${version}`, targetPath, { clone: false }, err => {
+    download(`direct:${config.repository}#${version}`, targetPath, { clone: false }, err => {
         spinner.stop()
         if (err) {
             console.log(err)

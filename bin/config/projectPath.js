@@ -1,0 +1,1 @@
+module.exports = 'D:\\日常\\Git库\\biyi-cli\\biyi-web'

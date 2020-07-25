@@ -18,7 +18,6 @@
     "chalk": "^3.0.0",
     "commander": "^4.1.0",
     "download-git-repo": "^3.0.2",
-    "github-download": "^0.5.0",
     "inquirer": "^7.0.4",
     "ora": "^4.0.3",
     "validate-npm-package-name": "^3.0.0",
